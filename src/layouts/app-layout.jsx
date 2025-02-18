@@ -1,11 +1,16 @@
+import Header from "@/components/header";
 import React from "react";
 import { Outlet } from "react-router-dom";
 
 function AppLayout() {
   return (
     <div>
-      Home
-      <Outlet />
+      <div className="grid-background"></div>
+
+      <main className="min-h-screen">
+        <Header></Header>
+        <Outlet />
+      </main>
     </div>
   );
 }

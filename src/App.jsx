@@ -64,11 +64,6 @@ function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <RouterProvider router={router} />
-      {/* <ul>
-        {instruments.map((instrument) => (
-          <li key={instrument.name}>{instrument.name}</li>
-        ))}
-      </ul> */}
     </ThemeProvider>
   );
 }

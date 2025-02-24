@@ -21,11 +21,13 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         "double-shadow":
           "inline-flex items-center rounded cursor-pointer bg-[#273ef1] px-6 py-3 font-semibold text-white transition [box-shadow:rgb(171,_196,245)-8px_8px] hover:[box-shadow:rgb(171,_196,_245)0px_0px]",
+        primaryBlue: "bg-blue-500 hover:bg-blue-600",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        xl: "h-14 font-bold text-lg rounded-md px-14 sm:h-16",
         icon: "size-9",
       },
     },

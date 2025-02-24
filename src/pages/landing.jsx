@@ -4,13 +4,18 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import React from "react";
 import { Link } from "react-router-dom";
 import companies from "../data/companies.json";
 import Autoplay from "embla-carousel-autoplay";
+import faqs from "../data/faqs.json";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 function LandingPage() {
   return (
@@ -60,9 +65,19 @@ function LandingPage() {
           ;
         </CarouselContent>
       </Carousel>
+      <img className="w-full" src="./banner.webp"></img>
       {/* banner */}
       {/* cards */}
-      {/* accordian */}
+      <Accordion type="single" collapsible>
+        {faqs.map((faq, index) => {
+          return (
+            <AccordionItem key={index} value={`item-${1 + index}`}>
+              <AccordionTrigger>{faq.question}</AccordionTrigger>
+              <AccordionContent>{faq.answer}</AccordionContent>
+            </AccordionItem>
+          );
+        })}
+      </Accordion>
     </main>
   );
 }
